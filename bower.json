@@ -1,0 +1,27 @@
+{
+  "name": "memo",
+  "version": "0.1",
+  "homepage": "http://morethannerds.herokuapp.com/",
+  "authors": [
+    "Rui Cheng <ktei2008@gmail.com>"
+  ],
+  "description": "Memo SPA",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "angular": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "bootstrap": "~3.*",
+    "foundation": "~4.*",
+    "Faker": "~0.5.11",
+    "font-awesome": "*"
+  }
+}
