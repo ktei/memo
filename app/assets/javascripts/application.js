@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap/dist/js/bootstrap.min
+
+//= require angular/angular.min
+//= require angular-route/angular-route.min
+
+//= require app/app
+//= require_tree ./app/config
+//= require_tree ./app/controllers
