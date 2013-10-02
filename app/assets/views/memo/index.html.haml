@@ -1,0 +1,11 @@
+.row
+  .col-lg-4
+    .list-group
+      %a.list-group-item{'ng-href'=> '#', 'ng-repeat' => 'folder in folders',
+      'ng-click' => 'activateFolder(folder)', 'anchor' => '', 'ng-class' => "{'active': activeFolder == folder}", }
+        {{folder.name}}
+  .col-lg-8
+    %div{'ng-if' => '!activeFolder.isNew'}
+      %div{'ng-include' => "'/assets/items/index.html'"}
+    %div{'ng-if' => 'activeFolder.isNew'}
+      %div{'ng-include' => "'/assets/folders/new.html'"}

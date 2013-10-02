@@ -21,7 +21,7 @@ module Memo
     # config.i18n.default_locale = :de
     
     config.assets.enabled = true
-    config.assets.paths << Rails.root.join('app', 'assets', 'templates')
+    config.assets.paths << Rails.root.join('app', 'assets', 'views')
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     
     config.generators do |g|

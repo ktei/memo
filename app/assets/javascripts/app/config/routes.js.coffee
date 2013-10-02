@@ -3,7 +3,7 @@ app
     $route
       .otherwise({redirectTo: '/'})
       .when('/', {
-        controller: 'HomeCtrl'
-        templateUrl: '/assets/home/index2.html'
+        controller: 'MemoCtrl'
+        templateUrl: '/assets/memo/index.html'
       })
   ])
