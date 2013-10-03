@@ -1,7 +1,24 @@
+@import 'mixins';
+
 body {
   padding-top: 70px;
 }
 
 .container {
   max-width:768px;
+}
+
+form {
+  &.signup {
+    padding: 20px;
+    @include round-shadow-bordered;
+    max-width: 350px;
+    margin:auto;
+  }
+}
+
+.help-block {
+  &.error {
+    color: red;
+  }
 }
