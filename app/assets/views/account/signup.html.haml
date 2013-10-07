@@ -1,13 +1,22 @@
 %form.signup.clearfix{role: 'form', name: 'signupForm'}
   .form-group
     %label{for: 'email'} Email address
+
     %input.form-control{type: 'email', id: 'email', name: 'email', placeholder: 'Enter email',
     'ng-model' => 'email', 'ng-required' => 'true', 'ng-maxlength' => '200', 'validate-on-blur' => ''}
-    %span.help-block.error{'ng-show' => 'signupForm.email.$error.required && signupForm.$dirty'} Please provide your email.
+
+    %span.help-block.error{'ng-show' => 'signupForm.email.$error.required && signupForm.email.$dirty'} Please provide your email.
     %span.help-block.error{'ng-show' => 'signupForm.email.$error.email'} This email is invalid.
     %span.help-block.error{'ng-show' => 'signupForm.email.$error.maxlength'} Email is too long.
+
   .form-group
     %label{for: 'password'} Password
+
     %input.form-control{type: 'password', id: 'password', name: 'password', placeholder: 'Make a password',
-    'ng-model' => 'password', 'ng-required' => 'true', 'ng-minlength' => '6'}
+    'ng-model' => 'password', 'ng-required' => 'true', 'ng-minlength' => '6', 'ng-maxlength' => '40', 'validate-on-blur' => ''}
+
+    %span.help-block.error{'ng-show' => 'signupForm.password.$error.required && signupForm.password.$dirty'} Please create a psssword.
+    %span.help-block.error{'ng-show' => 'signupForm.password.$error.minlength'} Password should be at least 6 characters long.
+    %span.help-block.error{'ng-show' => 'signupForm.password.$error.maxlength'} Password should be no more than 40 characters long.
+
   %input.btn.btn-primary.pull-right{type: 'submit', value: 'Create account', 'ng-disabled' => '!canCreate()'}

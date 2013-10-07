@@ -9,5 +9,27 @@
       = javascript_include_tag 'faker/MinFaker'
     = csrf_meta_tags
   %body
+    %header
+      .navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{href: '#'} Memo
+          .collapse.navbar-collapse.navbar-ex1-collapse
+            %ul.nav.navbar-nav
+              %li.dropdown
+                %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
+                  Folders
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{href: '#'} Ryarc
+                  %li
+                    %a{href: '#'} PHP
+                  %li
+                    %a{href: '#'} Ruby
     .container
       = yield
